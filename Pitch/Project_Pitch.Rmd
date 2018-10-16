@@ -1,0 +1,69 @@
+---
+title: "Project Week 4"
+subtitle: "ShinyApp: Predict Iris Species Using Machine Learning"
+author: "Sean"
+date: "October 16, 2018"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# ShinyApp
+
+This is a quick and easy to use web-based tool that can be used to predict iris species based on given paramters.
+
+---
+
+# How does it work
+
+This app uses machine learning on the available iris dataset to identify the iris species.
+
+The iris dataset consists of 150 measurements across 3 species of iris (*Iris setosa*, *Iris versicolor*, and *Iris virginica*).
+
+The available user defiend paramerts:
+
+* Sepal Length
+* Sepal Width
+* Petal Length
+* Petal Width
+
+---
+
+Traits of Iris Data
+
+```{r}
+library(ggplot2)
+
+ggplot(iris, aes(x=Petal.Length, y=Petal.Width, colour=Species)) +
+    geom_point() +
+    ggtitle("Petal Length by Petal Width Across Iris") +
+    ylab("Petal Width") +
+    xlab("Petal Length")
+
+```
+
+***
+
+You can also embed plots, for example:
+
+```{r}
+library(ggplot2)
+
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, colour=Species)) +
+    geom_point() +
+    ggtitle("Sepal Length by Sepal Width Across Iris Dataset") +
+    ylab("Sepal Width") +
+    xlab("Sepal Length")
+```
+
+---
+
+# Summary
+
+The random forest model used by shinyApp was able to get a test performance of 98% using a 75/25 split of the iris dataset. 
+
+Github repository:
+
+shinyApp Location: https://subarunoaria.shinyapps.io/Project_Week_4/
