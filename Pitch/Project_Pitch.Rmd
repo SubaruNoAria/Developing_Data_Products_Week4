@@ -1,9 +1,11 @@
 ---
 title: "Project Week 4"
-subtitle: "ShinyApp: Predict Iris Species Using Machine Learning"
 author: "Sean"
 date: "October 16, 2018"
-output: slidy_presentation
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+subtitle: 'ShinyApp: Predict Iris Species Using Machine Learning'
 ---
 
 ```{r setup, include=FALSE}
